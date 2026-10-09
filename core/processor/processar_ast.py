@@ -2,68 +2,38 @@ from __future__ import annotations
 import os
 from typing import Optional
 import gram
+from core.processor.visitors import *
+from core.processor import objects
 
-
-def visit_decl(node: gram.ASTNode) -> str:
-    """traducir nodo VAR a C"""
-    values = node.values
-    if len(values) < 2:
-        return ""
-
-    t = values[0]
-    name = values[1]
-
-    # declara sin iniciar
-    if len(values) == 2:
-        return f"{t} {name};"
-
-    # declara y inicia
-    value = values[2]
-    if t == 'char':
-        #normalizar a cadena de un char
-        val_str = str(value).strip('\'"')
-        value = f"'{val_str}'"
-
-    return f"{t} {name} = {value};"
-
-
-def process(ast: gram.ASTProgram, output_path: Optional[str] = None) -> str:
-    """procesa AST , gram y emmite C
-    
-    si llega un  ouutput_path, escribe el codigo  al archivo 
-    """
-    lines: list[str] = []
-    uses_stdint = False
-    uses_stdbool = False
-
-    for node in ast.blocks():
-        if not node.children:
-            continue
-        child = node.children[0]
-        if child.name == 'var declaration':
-            stmt = visit_decl(child)
-            if stmt:
-                lines.append(stmt)
-                if any(k in stmt for k in ('int8_t', 'int16_t', 'int32_t', 'int64_t',
-                                           'uint8_t', 'uint16_t', 'uint32_t', 'uint64_t', 'size_t')):
-                    uses_stdint = True
-                if 'bool' in stmt:
-                    uses_stdbool = True
-
-    #genera headers requeridos
-    headers: list[str] = []
-    if uses_stdint:
-        headers.append("#include <stdint.h>")
-        headers.append("#include <stddef.h>")
-    if uses_stdbool:
-        headers.append("#include <stdbool.h>")
-
-    header_block = "\n".join(headers) + "\n\n" if headers else ""
-    c_code = header_block + "\n".join(lines) + "\n"
-
-    if output_path:
-        os.makedirs(os.path.dirname(os.path.abspath(output_path)), exist_ok=True)
-        with open(output_path, "w", encoding="utf-8") as f:
-            f.write(c_code)
-
-    return c_code
+def process(ast: gram.ASTProgram):
+    for node in ast.walk(0):
+        if node.name in ('EGL_VAR_DECL', 'EC_VAR_DECL', 'var declaration'):
+            var_decl.visit(node)
+        elif node.name in ('EGL_FUNC_DECL', 'EC_FUNC_DECL', 'func declaration'):
+            func_decl.visit(node)
+        elif node.name in ('EGL_IF_STATEMENT', 'IF_STATEMENT', 'if statement'):
+            if_statement.visit(node)
+        elif node.name in ('EGL_FOR_STATEMENT', 'for statement'):
+            for_statement.visit(node)
+        elif node.name in ('EGL_METHOD_CALL', 'method call'):
+            target = node.values[0]
+            method = node.values[2] if len(node.values) >= 3 else node.values[1]
+            args = list(node.children[0].values) if node.children else []
+            objects.MethodCall(target, method, args)
+        elif node.name in ('EGL_MEMBER_ACCESS', 'member access'):
+            target = node.values[0]
+            member = node.values[2] if len(node.values) >= 3 else node.values[1]
+            objects.MemberAccess(target, member)
+        elif node.name in ('EGL_CALL', 'call'):
+            name = node.values[0]
+            args, kwargs = call.extract_call_args(node)
+            objects.Call(name, args, kwargs)
+        elif node.name in ('EGL_ASSIGN', 'assign'):
+            target = node.values[0]
+            val = node.children[0].values[0] if node.children and node.children[0].values else None
+            objects.Assign(target, val)
+        elif node.name in ('EGL_CLAUSE', 'clause'):
+            pass
+        else:
+            print('Falta por procesar nodo: ', node.name)
+    return objects.get_items()

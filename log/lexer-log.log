@@ -1,0 +1,310 @@
+Stack lexer-log ├<Node LEXER L=0>:
+├━━━━━━━━<Node LEXER L=1>:
+|         ✓ Lexer inicializado. Procesando 23 líneas de entrada
+|         ◦ Iniciando análisis léxico
+├━━━━━━━━━━━━<Node VISITOR-WORD L=2>:
+|             ◦ Carácter recibido: 'c'
+|             ◦ Inicio de palabra en línea 0, columna 0
+|             ✓ Palabra clave reconocida: 'clause'
+├━━━━━━━━━━━━<Node VISITOR-WORD L=2>:
+|             ◦ Carácter recibido: 'V'
+|             ◦ Inicio de palabra en línea 0, columna 7
+|             ✓ Palabra clave reconocida: 'Visibility'
+├━━━━━━━━━━━━<Node VISITOR-STRING L=2>:
+|             ◦ Carácter recibido: '"'
+|             ◦ Inicio de literal de cadena con delimitador '"'
+|             ✓ Procesando cadena estándar
+|             ✓ Cadena cerrada con éxito: 'public'
+├━━━━━━━━━━━━<Node VISITOR-WORD L=2>:
+|             ◦ Carácter recibido: 'c'
+|             ◦ Inicio de palabra en línea 1, columna 0
+|             ✓ Palabra clave reconocida: 'clause'
+├━━━━━━━━━━━━<Node VISITOR-WORD L=2>:
+|             ◦ Carácter recibido: 'T'
+|             ◦ Inicio de palabra en línea 1, columna 7
+|             ✓ Palabra clave reconocida: 'Target'
+├━━━━━━━━━━━━<Node VISITOR-STRING L=2>:
+|             ◦ Carácter recibido: '"'
+|             ◦ Inicio de literal de cadena con delimitador '"'
+|             ✓ Procesando cadena estándar
+|             ✓ Cadena cerrada con éxito: 'egl-c'
+├━━━━━━━━━━━━<Node VISITOR-WORD L=2>:
+|             ◦ Carácter recibido: 'c'
+|             ◦ Inicio de palabra en línea 2, columna 0
+|             ✓ Palabra clave reconocida: 'clause'
+├━━━━━━━━━━━━<Node VISITOR-WORD L=2>:
+|             ◦ Carácter recibido: 'A'
+|             ◦ Inicio de palabra en línea 2, columna 7
+|             ✓ Palabra clave reconocida: 'Arch'
+├━━━━━━━━━━━━<Node VISITOR-STRING L=2>:
+|             ◦ Carácter recibido: '"'
+|             ◦ Inicio de literal de cadena con delimitador '"'
+|             ✓ Procesando cadena estándar
+|             ✓ Cadena cerrada con éxito: 'amd64'
+├━━━━━━━━━━━━<Node VISITOR-WORD L=2>:
+|             ◦ Carácter recibido: 'c'
+|             ◦ Inicio de palabra en línea 3, columna 0
+|             ✓ Palabra clave reconocida: 'clause'
+├━━━━━━━━━━━━<Node VISITOR-WORD L=2>:
+|             ◦ Carácter recibido: 'S'
+|             ◦ Inicio de palabra en línea 3, columna 7
+|             ✓ Palabra clave reconocida: 'System'
+├━━━━━━━━━━━━<Node VISITOR-STRING L=2>:
+|             ◦ Carácter recibido: '"'
+|             ◦ Inicio de literal de cadena con delimitador '"'
+|             ✓ Procesando cadena estándar
+|             ✓ Cadena cerrada con éxito: 'win'
+├━━━━━━━━━━━━<Node VISITOR-WORD L=2>:
+|             ◦ Carácter recibido: 'c'
+|             ◦ Inicio de palabra en línea 4, columna 0
+|             ✓ Palabra clave reconocida: 'clause'
+├━━━━━━━━━━━━<Node VISITOR-WORD L=2>:
+|             ◦ Carácter recibido: 'S'
+|             ◦ Inicio de palabra en línea 4, columna 7
+|             ✓ Palabra clave reconocida: 'StackLimit'
+├━━━━━━━━━━━━<Node VISITOR-NUMBER L=2>:
+|             ◦ Carácter recibido: '1'
+|             ◦ Inicio de número en línea 4, columna 18
+|             ✓ Número procesado: 16384 (int)
+├━━━━━━━━━━━━<Node VISITOR-WORD L=2>:
+|             ◦ Carácter recibido: 'i'
+|             ◦ Inicio de palabra en línea 6, columna 0
+|             ✓ Palabra clave reconocida: 'int'
+├━━━━━━━━━━━━<Node VISITOR-WORD L=2>:
+|             ◦ Carácter recibido: 'd'
+|             ◦ Inicio de palabra en línea 6, columna 4
+|             ✦ Identificador reconocido: 'duplicar'
+├━━━━━━━━━━━━<Node VISITOR-SYMBOL L=2>:
+|             ◦ Carácter recibido: '('
+|             ◦ Buscando símbolo desde línea 6, columna 12
+|             ✓ Símbolo reconocido: '(' -> Token.LPAREN
+├━━━━━━━━━━━━<Node VISITOR-WORD L=2>:
+|             ◦ Carácter recibido: 'i'
+|             ◦ Inicio de palabra en línea 6, columna 13
+|             ✓ Palabra clave reconocida: 'int'
+├━━━━━━━━━━━━<Node VISITOR-WORD L=2>:
+|             ◦ Carácter recibido: 'n'
+|             ◦ Inicio de palabra en línea 6, columna 17
+|             ✦ Identificador reconocido: 'n'
+├━━━━━━━━━━━━<Node VISITOR-SYMBOL L=2>:
+|             ◦ Carácter recibido: ')'
+|             ◦ Buscando símbolo desde línea 6, columna 18
+|             ✓ Símbolo reconocido: ')' -> Token.RPAREN
+├━━━━━━━━━━━━<Node VISITOR-SYMBOL L=2>:
+|             ◦ Carácter recibido: ':'
+|             ◦ Buscando símbolo desde línea 6, columna 19
+|             ✓ Símbolo reconocido: ':' -> Token.COLON
+|         ✓ INDENT generado: nivel 0 -> 4
+├━━━━━━━━━━━━<Node VISITOR-WORD L=2>:
+|             ◦ Carácter recibido: 'i'
+|             ◦ Inicio de palabra en línea 7, columna 4
+|             ✓ Palabra clave reconocida: 'int'
+├━━━━━━━━━━━━<Node VISITOR-WORD L=2>:
+|             ◦ Carácter recibido: 'r'
+|             ◦ Inicio de palabra en línea 7, columna 8
+|             ✦ Identificador reconocido: 'resultado'
+├━━━━━━━━━━━━<Node VISITOR-SYMBOL L=2>:
+|             ◦ Carácter recibido: '='
+|             ◦ Buscando símbolo desde línea 7, columna 18
+|             ✓ Símbolo reconocido: '=' -> Token.ASSIGN
+├━━━━━━━━━━━━<Node VISITOR-WORD L=2>:
+|             ◦ Carácter recibido: 'n'
+|             ◦ Inicio de palabra en línea 7, columna 20
+|             ✦ Identificador reconocido: 'n'
+├━━━━━━━━━━━━<Node VISITOR-WORD L=2>:
+|             ◦ Carácter recibido: 'r'
+|             ◦ Inicio de palabra en línea 8, columna 4
+|             ✓ Palabra clave reconocida: 'return'
+├━━━━━━━━━━━━<Node VISITOR-WORD L=2>:
+|             ◦ Carácter recibido: 'r'
+|             ◦ Inicio de palabra en línea 8, columna 11
+|             ✦ Identificador reconocido: 'resultado'
+|         ✓ DEDENT generado: nivel regresó a 0
+├━━━━━━━━━━━━<Node VISITOR-WORD L=2>:
+|             ◦ Carácter recibido: 'i'
+|             ◦ Inicio de palabra en línea 10, columna 0
+|             ✓ Palabra clave reconocida: 'int'
+├━━━━━━━━━━━━<Node VISITOR-WORD L=2>:
+|             ◦ Carácter recibido: 'c'
+|             ◦ Inicio de palabra en línea 10, columna 4
+|             ✦ Identificador reconocido: 'contador'
+├━━━━━━━━━━━━<Node VISITOR-SYMBOL L=2>:
+|             ◦ Carácter recibido: '='
+|             ◦ Buscando símbolo desde línea 10, columna 13
+|             ✓ Símbolo reconocido: '=' -> Token.ASSIGN
+├━━━━━━━━━━━━<Node VISITOR-NUMBER L=2>:
+|             ◦ Carácter recibido: '0'
+|             ◦ Inicio de número en línea 10, columna 15
+|             ✓ Número procesado: 0 (int)
+├━━━━━━━━━━━━<Node VISITOR-WORD L=2>:
+|             ◦ Carácter recibido: 'f'
+|             ◦ Inicio de palabra en línea 12, columna 0
+|             ✓ Palabra clave reconocida: 'for'
+├━━━━━━━━━━━━<Node VISITOR-WORD L=2>:
+|             ◦ Carácter recibido: 'i'
+|             ◦ Inicio de palabra en línea 12, columna 4
+|             ✦ Identificador reconocido: 'i'
+├━━━━━━━━━━━━<Node VISITOR-WORD L=2>:
+|             ◦ Carácter recibido: 'i'
+|             ◦ Inicio de palabra en línea 12, columna 6
+|             ✓ Palabra clave reconocida: 'in'
+├━━━━━━━━━━━━<Node VISITOR-WORD L=2>:
+|             ◦ Carácter recibido: 'r'
+|             ◦ Inicio de palabra en línea 12, columna 9
+|             ✓ Palabra clave reconocida: 'ran'
+├━━━━━━━━━━━━<Node VISITOR-NUMBER L=2>:
+|             ◦ Carácter recibido: '5'
+|             ◦ Inicio de número en línea 12, columna 13
+|             ✓ Número procesado: 5 (int)
+├━━━━━━━━━━━━<Node VISITOR-SYMBOL L=2>:
+|             ◦ Carácter recibido: ':'
+|             ◦ Buscando símbolo desde línea 12, columna 14
+|             ✓ Símbolo reconocido: ':' -> Token.COLON
+|         ✓ INDENT generado: nivel 0 -> 4
+├━━━━━━━━━━━━<Node VISITOR-WORD L=2>:
+|             ◦ Carácter recibido: 'c'
+|             ◦ Inicio de palabra en línea 13, columna 4
+|             ✦ Identificador reconocido: 'contador'
+├━━━━━━━━━━━━<Node VISITOR-SYMBOL L=2>:
+|             ◦ Carácter recibido: '='
+|             ◦ Buscando símbolo desde línea 13, columna 13
+|             ✓ Símbolo reconocido: '=' -> Token.ASSIGN
+├━━━━━━━━━━━━<Node VISITOR-WORD L=2>:
+|             ◦ Carácter recibido: 'i'
+|             ◦ Inicio de palabra en línea 13, columna 15
+|             ✦ Identificador reconocido: 'i'
+|         ✓ DEDENT generado: nivel regresó a 0
+├━━━━━━━━━━━━<Node VISITOR-WORD L=2>:
+|             ◦ Carácter recibido: 'p'
+|             ◦ Inicio de palabra en línea 15, columna 0
+|             ✓ Palabra clave reconocida: 'ptr'
+├━━━━━━━━━━━━<Node VISITOR-WORD L=2>:
+|             ◦ Carácter recibido: 'p'
+|             ◦ Inicio de palabra en línea 15, columna 4
+|             ✦ Identificador reconocido: 'puntero_buffer'
+├━━━━━━━━━━━━<Node VISITOR-SYMBOL L=2>:
+|             ◦ Carácter recibido: '='
+|             ◦ Buscando símbolo desde línea 15, columna 19
+|             ✓ Símbolo reconocido: '=' -> Token.ASSIGN
+├━━━━━━━━━━━━<Node VISITOR-WORD L=2>:
+|             ◦ Carácter recibido: 'm'
+|             ◦ Inicio de palabra en línea 15, columna 21
+|             ✦ Identificador reconocido: 'malloc'
+├━━━━━━━━━━━━<Node VISITOR-SYMBOL L=2>:
+|             ◦ Carácter recibido: '('
+|             ◦ Buscando símbolo desde línea 15, columna 27
+|             ✓ Símbolo reconocido: '(' -> Token.LPAREN
+├━━━━━━━━━━━━<Node VISITOR-WORD L=2>:
+|             ◦ Carácter recibido: 'i'
+|             ◦ Inicio de palabra en línea 15, columna 28
+|             ✓ Palabra clave reconocida: 'int'
+├━━━━━━━━━━━━<Node VISITOR-SYMBOL L=2>:
+|             ◦ Carácter recibido: ','
+|             ◦ Buscando símbolo desde línea 15, columna 31
+|             ✓ Símbolo reconocido: ',' -> Token.COMMA
+├━━━━━━━━━━━━<Node VISITOR-NUMBER L=2>:
+|             ◦ Carácter recibido: '1'
+|             ◦ Inicio de número en línea 15, columna 33
+|             ✓ Número procesado: 10 (int)
+├━━━━━━━━━━━━<Node VISITOR-SYMBOL L=2>:
+|             ◦ Carácter recibido: ')'
+|             ◦ Buscando símbolo desde línea 15, columna 35
+|             ✓ Símbolo reconocido: ')' -> Token.RPAREN
+├━━━━━━━━━━━━<Node VISITOR-WORD L=2>:
+|             ◦ Carácter recibido: 'i'
+|             ◦ Inicio de palabra en línea 17, columna 0
+|             ✓ Palabra clave reconocida: 'if'
+├━━━━━━━━━━━━<Node VISITOR-WORD L=2>:
+|             ◦ Carácter recibido: 'n'
+|             ◦ Inicio de palabra en línea 17, columna 3
+|             ✓ Palabra clave reconocida: 'not'
+├━━━━━━━━━━━━<Node VISITOR-WORD L=2>:
+|             ◦ Carácter recibido: 'p'
+|             ◦ Inicio de palabra en línea 17, columna 7
+|             ✦ Identificador reconocido: 'puntero_buffer'
+├━━━━━━━━━━━━<Node VISITOR-SYMBOL L=2>:
+|             ◦ Carácter recibido: ':'
+|             ◦ Buscando símbolo desde línea 17, columna 21
+|             ✓ Símbolo reconocido: ':' -> Token.COLON
+|         ✓ INDENT generado: nivel 0 -> 4
+├━━━━━━━━━━━━<Node VISITOR-WORD L=2>:
+|             ◦ Carácter recibido: 'p'
+|             ◦ Inicio de palabra en línea 18, columna 4
+|             ✦ Identificador reconocido: 'print'
+├━━━━━━━━━━━━<Node VISITOR-SYMBOL L=2>:
+|             ◦ Carácter recibido: '('
+|             ◦ Buscando símbolo desde línea 18, columna 9
+|             ✓ Símbolo reconocido: '(' -> Token.LPAREN
+├━━━━━━━━━━━━<Node VISITOR-STRING L=2>:
+|             ◦ Carácter recibido: '"'
+|             ◦ Inicio de literal de cadena con delimitador '"'
+|             ✓ Procesando cadena estándar
+|             ✓ Cadena cerrada con éxito: 'no se pudo crear el espacio'
+├━━━━━━━━━━━━<Node VISITOR-SYMBOL L=2>:
+|             ◦ Carácter recibido: ')'
+|             ◦ Buscando símbolo desde línea 18, columna 39
+|             ✓ Símbolo reconocido: ')' -> Token.RPAREN
+|         ✓ DEDENT generado: nivel regresó a 0
+├━━━━━━━━━━━━<Node VISITOR-WORD L=2>:
+|             ◦ Carácter recibido: 'e'
+|             ◦ Inicio de palabra en línea 19, columna 0
+|             ✓ Palabra clave reconocida: 'else'
+├━━━━━━━━━━━━<Node VISITOR-SYMBOL L=2>:
+|             ◦ Carácter recibido: ':'
+|             ◦ Buscando símbolo desde línea 19, columna 4
+|             ✓ Símbolo reconocido: ':' -> Token.COLON
+|         ✓ INDENT generado: nivel 0 -> 4
+├━━━━━━━━━━━━<Node VISITOR-WORD L=2>:
+|             ◦ Carácter recibido: 'p'
+|             ◦ Inicio de palabra en línea 20, columna 4
+|             ✦ Identificador reconocido: 'puntero_buffer'
+├━━━━━━━━━━━━<Node VISITOR-SYMBOL L=2>:
+|             ◦ Carácter recibido: '='
+|             ◦ Buscando símbolo desde línea 20, columna 19
+|             ✓ Símbolo reconocido: '=' -> Token.ASSIGN
+├━━━━━━━━━━━━<Node VISITOR-NUMBER L=2>:
+|             ◦ Carácter recibido: '4'
+|             ◦ Inicio de número en línea 20, columna 21
+|             ✓ Número procesado: 42 (int)
+├━━━━━━━━━━━━<Node VISITOR-WORD L=2>:
+|             ◦ Carácter recibido: 'p'
+|             ◦ Inicio de palabra en línea 21, columna 4
+|             ✦ Identificador reconocido: 'print'
+├━━━━━━━━━━━━<Node VISITOR-SYMBOL L=2>:
+|             ◦ Carácter recibido: '('
+|             ◦ Buscando símbolo desde línea 21, columna 9
+|             ✓ Símbolo reconocido: '(' -> Token.LPAREN
+├━━━━━━━━━━━━<Node VISITOR-STRING L=2>:
+|             ◦ Carácter recibido: '"'
+|             ◦ Inicio de literal de cadena con delimitador '"'
+|             ✓ Procesando cadena estándar
+|             ✓ Cadena cerrada con éxito: 'El valor del buffer es'
+├━━━━━━━━━━━━<Node VISITOR-SYMBOL L=2>:
+|             ◦ Carácter recibido: ','
+|             ◦ Buscando símbolo desde línea 21, columna 34
+|             ✓ Símbolo reconocido: ',' -> Token.COMMA
+├━━━━━━━━━━━━<Node VISITOR-WORD L=2>:
+|             ◦ Carácter recibido: 'p'
+|             ◦ Inicio de palabra en línea 21, columna 36
+|             ✦ Identificador reconocido: 'puntero_buffer'
+├━━━━━━━━━━━━<Node VISITOR-SYMBOL L=2>:
+|             ◦ Carácter recibido: ')'
+|             ◦ Buscando símbolo desde línea 21, columna 50
+|             ✓ Símbolo reconocido: ')' -> Token.RPAREN
+├━━━━━━━━━━━━<Node VISITOR-WORD L=2>:
+|             ◦ Carácter recibido: 'f'
+|             ◦ Inicio de palabra en línea 22, columna 4
+|             ✦ Identificador reconocido: 'free'
+├━━━━━━━━━━━━<Node VISITOR-SYMBOL L=2>:
+|             ◦ Carácter recibido: '('
+|             ◦ Buscando símbolo desde línea 22, columna 8
+|             ✓ Símbolo reconocido: '(' -> Token.LPAREN
+├━━━━━━━━━━━━<Node VISITOR-WORD L=2>:
+|             ◦ Carácter recibido: 'p'
+|             ◦ Inicio de palabra en línea 22, columna 9
+|             ✦ Identificador reconocido: 'puntero_buffer'
+├━━━━━━━━━━━━<Node VISITOR-SYMBOL L=2>:
+|             ◦ Carácter recibido: ')'
+|             ◦ Buscando símbolo desde línea 22, columna 23
+|             ✓ Símbolo reconocido: ')' -> Token.RPAREN
+|         ✓ Análisis léxico completado. Total de tokens generados: 82

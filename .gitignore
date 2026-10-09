@@ -1,16 +1,4 @@
-# byte compilados o archivos cache
 __pycache__/
 *.py[cod]
 *$py.class
-
-# c y binarios
-output.c
-*.o
-*.obj
-*.exe
-*.dll
-*.so
-
-# loougis
-log/*.log
-*.log
+.vscode/
